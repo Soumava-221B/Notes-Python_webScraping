@@ -1,0 +1,13 @@
+fetch('https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html')
+response.css('.product_page')
+response.css('.product_main h1::text').get()
+
+// here xpath is used for fetching data from the table
+
+response.xpath("//ul[@class='breadcrumb']/li[@class='active']/preceding-sibling::li[1]/a/text()").get()
+response.xpath("//div[@id='product_description']/following-sibling::p/text()").get()   
+table_rows = response.css("table tr")
+len(table_rows)
+table_rows[1].css('td ::text').get()
+table_rows[2].css('td ::text').get()
+response.css("p.star-rating").attrib['class']
