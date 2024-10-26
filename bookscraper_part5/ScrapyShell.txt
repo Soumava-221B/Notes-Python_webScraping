@@ -11,3 +11,6 @@ len(table_rows)
 table_rows[1].css('td ::text').get()
 table_rows[2].css('td ::text').get()
 response.css("p.star-rating").attrib['class']
+
+scrapy crawl bookspider -0 bookspider.csv
+scrapy crawl bookspider -O bookspider.json
